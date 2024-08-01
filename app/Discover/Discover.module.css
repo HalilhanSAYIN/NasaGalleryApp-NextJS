@@ -1,0 +1,16 @@
+.discoverMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputContent {
+    width: 80%;
+    margin: 4rem 2rem;
+  
+}
+
+.discoverContent {
+    width: 80%;
+}

@@ -1,0 +1,113 @@
+.container {
+    /* Container centering and padding */
+    margin: 0 auto;
+    padding: 1rem; /* p-4 */
+  }
+  
+  .grid {
+    /* Grid layout */
+    display: grid;
+    gap: 1rem; /* gap-4 */
+  }
+  
+  /* Grid column configuration */
+  @media (min-width: 640px) { /* sm */
+    .grid {
+      grid-template-columns: repeat(1, 1fr); /* sm:grid-cols-1 */
+    }
+  }
+  @media (min-width: 768px) { /* md */
+    .grid {
+      grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+    }
+  }
+  @media (min-width: 1024px) { /* lg */
+    .grid {
+      grid-template-columns: repeat(3, 1fr); /* lg:grid-cols-3 */
+    }
+  }
+  
+  .relative {
+    /* Positioning */
+    position: relative;
+  }
+  
+  .relativeWrapper {
+    /* Wrapper for image */
+    position: relative;
+    width: 100%;
+    height: 24rem; /* h-96 */
+  }
+  
+  .image {
+    /* Image styling */
+    border-radius: 0.375rem; /* rounded-md */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* object-cover */
+  }
+  
+  .overlay {
+    /* Overlay styling */
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* bg-black bg-opacity-50 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    opacity: 0;
+    transition: opacity 0.3s; /* transition-opacity duration-300 */
+  }
+  
+  .relative:hover .overlay {
+    opacity: 1;
+  }
+  
+  .title {
+    /* Title styling */
+    font-size: 1.25rem; /* text-l */
+    font-weight: 600; /* font-semibold */
+    color: white;
+    padding: 1rem; /* p-4 */
+  }
+  
+  /* Responsive title sizes */
+  @media (min-width: 640px) { /* sm */
+    .title {
+      font-size: 1.25rem; /* text-xl */
+    }
+  }
+  @media (min-width: 768px) { /* md */
+    .title {
+      font-size: 1.5rem; /* text-2xl */
+    }
+  }
+  @media (min-width: 1280px) { /* lg */
+    .title {
+      font-size: 3rem; /* text-5xl */
+    }
+  }
+  @media (min-width: 1536px) { /* xl */
+    .title {
+      font-size: 1.875rem; /* text-3xl */
+    }
+  }
+  
+  .description {
+    /* Description styling */
+    font-size: 1rem; /* text-base */
+    color: #d1d5db; /* text-gray-300 */
+    padding: 0 0.5rem; /* px-2 */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+  
+  .date {
+    /* Date styling */
+    font-size: 1rem; /* text-base */
+    color: #d1d5db; /* text-gray-300 */
+    padding: 0.5rem; /* p-2 */
+  }
