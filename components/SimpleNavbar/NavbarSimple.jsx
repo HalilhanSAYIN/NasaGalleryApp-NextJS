@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { Group, Code } from '@mantine/core';
 import {
-  IconBellRinging,
-  IconFingerprint,
   IconPlanet,
-  IconReceipt2,
   IconSearch,
   IconTelescope,
-  TbPlanet
 } from '@tabler/icons-react';
 import classes from './NavbarSimple.module.css';
 import Image from 'next/image';
@@ -32,13 +28,11 @@ function NavbarSimple({closeDrawer}) {
       onClick={(event) => {
         closeDrawer()
         setActive(item.label);
-      }}
-    >
+      }}>
       <item.icon className={classes.linkIcon} stroke={1.5} />
       <span >{item.label}</span>
     </Link>
   ));
-
   return (
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
@@ -52,8 +46,6 @@ function NavbarSimple({closeDrawer}) {
         </Group>
         {links}
       </div>
-
-     
     </nav>
   );
 }
