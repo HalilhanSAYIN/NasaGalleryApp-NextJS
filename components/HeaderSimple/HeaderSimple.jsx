@@ -7,6 +7,7 @@ import classes from './HeaderSimple.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import NavbarSimple from '@/components/SimpleNavbar/NavbarSimple';
+import { ColorSchemeToggle } from '../ColorShemeToggle/ColorShemeToggle';
 const links = [
   { link: '/About', label: 'About Nasa' },
   { link: '/ISS', label: 'ISS' },
@@ -35,21 +36,21 @@ export function HeaderSimple() {
   return (
     <header className={classes.header} >
       <Container size="md" className={classes.inner}>
+      <ColorSchemeToggle/>
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
+        
         <Link href={'/'}>
           <Image
             src="/nasa.png"
             width={128}
             height={128}
-            alt="logo"
-          />
+            alt="logo"/>
         </Link>
        
         <Burger opened={opened} onClick={open} hiddenFrom="xs" size="sm" />
         <Drawer
-
           opened={opened}
           onClose={close}
           padding="md"

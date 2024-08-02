@@ -11,7 +11,7 @@ import {Archivo} from "@next/font/google"
 const archivoFont = Archivo({subsets:["latin"]})
 
 export const metadata = {
-  title: 'Mantine Next.js template',
+  title: 'Nasa Gallery App',
   description: 'I am using Mantine with Next.js!',
 };
 
