@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { InputWithButton } from '../../components/InputWithButton/InputWithButton'
-import classes from './discover.module.css'
+import classes from './Discover.module.css'
 import DiscoverComponent from '@/components/DiscoverComponent/DiscoverComponent'
 
 function Discover() {
